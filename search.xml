@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[搭建Hexo博客]]></title>
+    <url>%2F2018%2F03%2F09%2F%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[第一次建立博客的记录 第一步 下载node.js并安装 下载Git并安装 下载安装Hexo(npm install -g hexo) 第二步 建立GitHub Pages New repository -&gt; 你的Github用户名.github.io 作为仓库名 第三步 创建本地文件 新建一个文件夹，以Blog为例 在文件夹目录下右键选择Git Bash Here，并输入hexo init（初始化博客） 运行 hexo server，此时可以通过输入地址localhost:4000访问博客 第四步 关联GitHub Pages 打开Blog目录下的_config.yml配置文件，在末尾加入以下代码 1234deploy: type: git repository: https://github.com/123/123.github.io.git branch: master https://github.com/123/123.github.io.git 为你刚刚新建仓库的链接 注意以上代码的格式 所有：之后都要加一个空格 type，repository，branch 3个标签之前加2个空格 输入 1npm install hexo-deployer-git --save 输入 123hexo clean hexo g hexo d 现在就可以登上 xxxx.github.io 访问你的博客了 更换主题(Next主题) 下载主题（进入themes目录） 1git clone https://github.com/iissnan/hexo-theme-next.git 打开__config.yml文件，将themes修改为下载到的主题文件夹的名字,比如 1theme: next 修改主题的语言，在__config.yml文件的最上方修改（简体中文） 1language: zh-Hans 运行输入 12hexo ghexo d 上传博客 在文件夹目录下，使用Git命令输入 1hexo new &quot;标题&quot; 在/source/_posts下会生成对应的.md文件，在该.md文件中编写你的博客（使用MakeDown语法） 编写完成后，运行 12hexo g hexo d 可以在生成本地文件时运行 hexo clean 用来清除本地缓存文件]]></content>
+      <tags>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+</search>
