@@ -2,8 +2,10 @@
 
 
 
+  
 
-<html class="theme-next mist" lang="zh-Hans">
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -99,7 +101,7 @@
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -345,72 +347,26 @@
       
         
           
-            <ul>
-<li>第一次建立博客的记录</li>
-</ul>
-<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><ul>
-<li>下载<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js</a>并安装</li>
-<li>下载<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a>并安装</li>
-<li>下载安装Hexo(npm install -g hexo)</li>
-</ul>
-<h2 id="第二步-建立GitHub-Pages"><a href="#第二步-建立GitHub-Pages" class="headerlink" title="第二步 建立GitHub Pages"></a>第二步 建立GitHub Pages</h2><ul>
-<li>New repository -&gt; 你的Github用户名.github.io  作为仓库名</li>
-</ul>
-<h2 id="第三步-创建本地文件"><a href="#第三步-创建本地文件" class="headerlink" title="第三步 创建本地文件"></a>第三步 创建本地文件</h2><ul>
-<li>新建一个文件夹，以Blog为例</li>
-<li>在文件夹目录下右键选择Git Bash Here，并输入hexo init（初始化博客）</li>
-<li>运行 hexo server，此时可以通过输入地址localhost:4000访问博客</li>
-</ul>
-<h2 id="第四步-关联GitHub-Pages"><a href="#第四步-关联GitHub-Pages" class="headerlink" title="第四步 关联GitHub Pages"></a>第四步 关联GitHub Pages</h2><ul>
-<li><p>打开Blog目录下的_config.yml配置文件，在末尾加入以下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/123/123.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a href="https://github.com/123/123.github.io.git" target="_blank" rel="noopener">https://github.com/123/123.github.io.git</a> 为你刚刚新建仓库的链接</p>
-</li>
-<li>注意以上代码的格式</li>
-</ul>
-<ol>
-<li>所有：之后都要加一个空格</li>
-<li>type，repository，branch 3个标签之前加2个空格</li>
-</ol>
-<ul>
-<li><p>输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>现在就可以登上 xxxx.github.io 访问你的博客了</p>
-</li>
-</ul>
-<h2 id="更换主题-Next主题"><a href="#更换主题-Next主题" class="headerlink" title="更换主题(Next主题)"></a>更换主题(Next主题)</h2><ul>
-<li><p>下载主题（进入themes目录）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next.git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打开__config.yml文件，将themes修改为下载到的主题文件夹的名字,比如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改主题的语言，在__config.yml文件的最上方修改（简体中文）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-Hans</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="上传博客"><a href="#上传博客" class="headerlink" title="上传博客"></a>上传博客</h2><ul>
-<li><p>在文件夹目录下，使用Git命令输入 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;标题&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在/source/_posts下会生成对应的.md文件，在该.md文件中编写你的博客（使用MakeDown语法）</p>
-</li>
-<li><p>编写完成后，运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>可以在生成本地文件时运行 hexo clean 用来清除本地缓存文件</p>
-</li>
-</ul>
-
           
+第一次建立博客的记录
+
+第一步
+下载node.js并安装
+下载Git并安装
+下载安装Hexo(npm install -g hexo)
+
+第二步 建立GitHub Pages
+New repository -&gt; 你的Github用户名.github.io  作为仓库名
+
+第三步 创建本地文件
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/09/搭建Hexo博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
