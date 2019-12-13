@@ -1,0 +1,2 @@
+# yangpotato.github.io
+MyBlog
